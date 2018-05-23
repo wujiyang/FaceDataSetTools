@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# imagedata and facemodels
+LFW
+FaceModels
+DetectionAndAlign/tools/
+
