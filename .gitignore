@@ -34,5 +34,7 @@
 # imagedata and facemodels
 LFW
 FaceModels
-DetectionAndAlign/tools/
+DetectAndAlign/tools/*
+!DetectAndAlign/tools/Readme.md
+
 
