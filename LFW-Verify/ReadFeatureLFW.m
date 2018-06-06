@@ -18,7 +18,7 @@ width = length(ROIy);
 
 allPairs = [same_pair;diff_pair];
 % meanC = caffe.read_mean('D:\ThirdPartyLibrary\caffe\examples\siamese\mean.proto');
-net = caffe.Net('/home/wujiyang/FaceTestDataSet/FaceModels/SpherefaceNet-20/sphereface_deploy_20.prototxt','/home/wujiyang/FaceTestDataSet/FaceModels/SpherefaceNet-20/sphereface_model_20.caffemodel', 'test');%
+net = caffe.Net('/home/wujiyang/FaceDataSetTools/FaceModels/amsoftmax-20/amsoftmax_20_deploy_mirror_normalize.prototxt','/home/wujiyang/FaceDataSetTools/FaceModels/amsoftmax-20/amsoftmax_20_vggface2.caffemodel', 'test');%
 num = size(allPairs,1);
 AllFeature1 = zeros(feature_dim,num);
 AllFeature2 = zeros(feature_dim,num);

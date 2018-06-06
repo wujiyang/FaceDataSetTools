@@ -1,6 +1,6 @@
 close all;
 
-pdollar_toolbox_path='/home/wujiyang/face-verification/tools';
+pdollar_toolbox_path='/home/wujiyang/FaceDataSetTools/DetectAndAlign/tools';
 addpath(genpath(pdollar_toolbox_path));
 
 num = size(AllFeature1,2);

@@ -17,7 +17,7 @@ function evaluation()
 clear;clc;close all;
 
 %% caffe setttings
-addpath '/home/wujiyang/caffe/matlab';
+addpath /home/wujiyang/caffe/matlab;
 gpu = 1;
 if gpu
    gpu_id = 0;
@@ -28,13 +28,13 @@ else
 end
 caffe.reset_all();
 
-model   = '/home/wujiyang/FaceTestDataSet/FaceModels/SpherefaceNet-20/sphereface_deploy_20.prototxt';
-weights = '/home/wujiyang/FaceTestDataSet/FaceModels/SpherefaceNet-20/sphereface_model_20.caffemodel';
+model   = '/home/wujiyang/FaceDataSetTools/FaceModels/amsoftmax-20/amsoftmax_20_deploy_mirror_normalize.prototxt';
+weights = '/home/wujiyang/FaceDataSetTools/FaceModels/amsoftmax-20/amsoftmax_20_vggface2.caffemodel';
 net     = caffe.Net(model, weights, 'test');
-net.save('/home/wujiyang/FaceTestDataSet/FaceModels/SpherefaceNet-20/sphereface_model.caffemodel');
+net.save('/home/wujiyang/FaceDataSetTools/FaceModels/amsoftmax-20/finally.caffemodel');
 
 %% compute features
-pairs = parseList('pairs.txt', '/home/wujiyang/FaceTestDataSet/LFW/aligned112-96');
+pairs = parseList('pairs.txt', '/home/wujiyang/FaceDataSetTools/LFW/aligned112-96');
 for i = 1:length(pairs)
     fprintf('extracting deep features from the %dth face pair...\n', i);
     pairs(i).featureL = extractDeepFeature(pairs(i).fileL, net);
