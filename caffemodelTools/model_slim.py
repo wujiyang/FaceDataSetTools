@@ -12,8 +12,8 @@ import caffe
 import numpy as np
 import matplotlib.pyplot as plt
 
-deploy_model = '../FaceModels/SpherefaceNet-20/sphereface_deploy_20.prototxt'
-caffe_model = '../FaceModels/SpherefaceNet-20/sphereface_model_20.caffemodel'
+deploy_model = '../FaceModels/amsoftmax-20/amsoftmax_20_deploy_mirror_normalize.prototxt'
+caffe_model = '../FaceModels/amsoftmax-20/amsoftmax_20_vggface2.caffemodel'
 net = caffe.Net(deploy_model, caffe_model, caffe.TEST)  
 
-net.save('../FaceModels/SpherefaceNet-20/final.caffemodel')
+net.save('../FaceModels/amsoftmax-20/final.caffemodel')
